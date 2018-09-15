@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Prueba ani 2"
+config/name="RPGgame"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
