@@ -22,7 +22,7 @@ func _physics_process(delta):
 		mov_y = 0
 		
 		if Input.is_action_pressed("ui_up"):
-			mov_y = -200
+			mov_y = -450
 		
 	move_and_slide(Vector2(mov_x,mov_y),Vector2(0,-1))
 	if new_anim != anim:
