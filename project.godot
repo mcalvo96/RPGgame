@@ -14,6 +14,10 @@ config/name="RPGgame"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Persistence="*res://saves/Persistence.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

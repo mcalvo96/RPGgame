@@ -1,0 +1,179 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://titlesets/puerta.png" type="Texture" id=1]
+[ext_resource path="res://titlesets/hierba1.png" type="Texture" id=2]
+[ext_resource path="res://titlesets/hierba2.png" type="Texture" id=3]
+[ext_resource path="res://titlesets/hierba3.png" type="Texture" id=4]
+[ext_resource path="res://titlesets/arbusto.png" type="Texture" id=5]
+[ext_resource path="res://titlesets/barril.png" type="Texture" id=6]
+[ext_resource path="res://titlesets/camino3.png" type="Texture" id=7]
+[ext_resource path="res://titlesets/camino1.png" type="Texture" id=8]
+[ext_resource path="res://titlesets/camino2.png" type="Texture" id=9]
+[ext_resource path="res://titlesets/adgvsg.PNG" type="Texture" id=10]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Node" type="Node"]
+
+[node name="puerta" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 134.594, 133.032 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="puerta" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="puerta/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -57.3376, 112.896, -57.3376, 128.026, -127.044, 128.026, -127.584, 112.896, -121.64, 113.437, -120.798, -17.0568, -121.318, -117.624, -43.0668, -118.022, -12.4813, -128.349, 9.36549, -128.349, 33.5956, -123.583, 52.6619, -116.83, 127.251, -116.944, 126.764, 112.197, 129.69, 112.685, 129.585, 128.058, 64.555, 128.705, 63.9079, 113.499, 65.5256, 112.205, 64.8785, -80.8149, -61.6231, -78.8737, -60.6346, 112.679 )
+
+[node name="hierba1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 32.171, 352.652 )
+scale = Vector2( 1.54042, 1.66203 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="hierba2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 156.464, 358.458 )
+scale = Vector2( 1.56319, 1.66028 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="hierba3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 556.887, 217.181 )
+scale = Vector2( 1.57917, 1.68294 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="arbusto" type="Sprite" parent="." index="4"]
+
+position = Vector2( 388.805, 204 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="arbusto" index="0"]
+
+position = Vector2( 0.193498, -2.50026 )
+scale = Vector2( 1.625, 1.70312 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="arbusto/StaticBody2D" index="0"]
+
+position = Vector2( -3.52859e-005, -0.623714 )
+scale = Vector2( 1, 0.987734 )
+build_mode = 0
+polygon = PoolVector2Array( 3.07692, -32, -24.6154, -21.4312, -37.5384, 6.75229, -37.5384, 22.6055, -8.61537, 30.8257, 17.2308, 29.6514, 36.3077, 13.7982, 30.1539, -14.9725 )
+
+[node name="barril" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 289.805, 350.123 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="barril" index="0"]
+
+position = Vector2( 0.342536, 0.0922883 )
+scale = Vector2( 0.715248, 0.871076 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barril/StaticBody2D" index="0"]
+
+position = Vector2( 0.149346, 0.820879 )
+scale = Vector2( 2.47589, 1.64325 )
+shape = SubResource( 2 )
+
+[node name="camino3" type="Sprite" parent="." index="6"]
+
+position = Vector2( 143.805, 487 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="camino1" type="Sprite" parent="." index="7"]
+
+position = Vector2( 522.899, 531.629 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="camino2" type="Sprite" parent="." index="8"]
+
+position = Vector2( 462.555, 424.824 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="brick" type="Sprite" parent="." index="9"]
+
+position = Vector2( 719.74, 330.137 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="brick" index="0"]
+
+position = Vector2( -288.577, 11.6454 )
+scale = Vector2( 0.065576, 0.0555857 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick/StaticBody2D" index="0"]
+
+position = Vector2( 4410.54, -204.336 )
+scale = Vector2( 75.4502, -46.7157 )
+shape = SubResource( 3 )
+
+
